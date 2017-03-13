@@ -31,7 +31,7 @@ networks of arbitrary depth.
 ## Get Started
 Download the starter code from git with:
 
-    git clone https://github.com/sigmunjr/INF5860_Oblig1.git
+    git clone https://github.com/anneschistad/INF5860_Oblig1.git
 
 **[Option 1] Use IFI-linux computer:**
 
