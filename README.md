@@ -31,7 +31,7 @@ networks of arbitrary depth.
 ## Get Started
 Download the starter code from git with:
 
-    git clone https://github.com/anneschistad/INF5860_Oblig1.git
+    git clone https://github.com/anneschistad/INF5860_Mandatory1.git
 
 **[Option 1] Use IFI-linux computer:**
 
@@ -57,7 +57,7 @@ to make sure that all dependencies for the code are installed globally on your
 machine. To set up a virtual environment, run the following:
 
 ```bash
-cd assignment2
+
 sudo pip install virtualenv      # This may already be installed
 virtualenv .env                  # Create a virtual environment
 source .env/bin/activate         # Activate the virtual environment
@@ -68,7 +68,7 @@ deactivate                       # Exit the virtual environment
 
 **Download data:**
 Once you have the starter code, you will need to download the CIFAR-10 dataset.
-Run the following from the `assignment2` directory:
+Run the following from the main directory of the code:
 
 ```bash
 cd code/datasets
