@@ -96,13 +96,12 @@ class TwoLayerNet(object):
     #############################################################################
     m = len(y)
 
-    h = scores
-    h -= np.max(h)
-    h = np.exp(h) / np.sum(np.exp(h), axis=1, keepdims=True)
+    h = np.exp(scores) # - np.max(scores, axis=1, keepdims=True))
+    h /= np.sum(h, axis=1, keepdims=True)
 
     data_loss = -np.sum(np.log(h[range(m),y]))/m
 
-    reg_loss = 0.5 * reg * np.sum(W1 * W1) + 0.5 * reg * np.sum(W2 * W2)
+    reg_loss = 0.5 * reg * np.sum(W1**2) + 0.5 * reg * np.sum(W2**2)
     loss = data_loss + reg_loss
     #############################################################################
     #                              END OF YOUR CODE                             #

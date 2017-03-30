@@ -6,7 +6,7 @@ training neural networks. Each update rule accepts current weights and the
 gradient of the loss with respect to those weights and produces the next set of
 weights. Each update rule has the same interface:
 
-def update(w, dw, config=None):
+# def update(w, dw, config=None):
 
 Inputs:
   - w: A numpy array giving the current weights.
@@ -44,7 +44,7 @@ def sgd(w, dw, config=None):
   # TODO: Implement the Gradient Descent update formula                       #
   # return w after you have updated the values                                #
   #############################################################################
-  pass
+  w -= learning_rate * dw
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################

@@ -17,7 +17,9 @@ def affine_relu_forward(x, w, b):
   #############################################################################
   # TODO: Combind Relu and affine forward, into a convenience function        #
   #############################################################################
-  pass
+  a, fw_cache = affine_forward(x, w, b)
+  out, relu_cache = relu_forward(a)
+  cache = (fw_cache, relu_cache)
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
@@ -32,7 +34,9 @@ def affine_relu_backward(dout, cache):
   #############################################################################
   # TODO: Combind Relu and affine backward, into a convenience function       #
   #############################################################################
-  pass
+  fw_cache, relu_cache = cache
+  da = relu_backward(dout, relu_cache)
+  dx, dw, db = affine_backward(da, fw_cache)
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
